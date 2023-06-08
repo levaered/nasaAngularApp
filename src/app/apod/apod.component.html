@@ -1,0 +1,11 @@
+<div class="wrapper">
+    <div class="inputs_wrapper">
+      <input type="date" class="form-control" [(ngModel)]="date">
+    </div>
+    
+    <div class="picture_wrapper" [ngStyle]="{'background-image': 'url(' + apodPhoto + ')'}">
+        <h2>{{title}}</h2>
+        <p>{{description}}</p>
+    </div>
+  </div>
+  

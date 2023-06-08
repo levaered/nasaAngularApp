@@ -1,0 +1,10 @@
+<div class="wrapper">
+  <div class="inputs_wrapper">
+    <input [(ngModel)]="selectedDate" (ngModelChange)="fetchEarthPhotos()" type="date" class="form-control">
+    <input [(ngModel)]="longitude" (ngModelChange)="fetchEarthPhotos()" type="number" class="form-control" placeholder="Longitude">
+    <input [(ngModel)]="latitude" (ngModelChange)="fetchEarthPhotos()" type="number" class="form-control" placeholder="Latitude">
+  </div>
+  <div class="earth_img" [ngStyle]="{'background-image': 'url(' + eartchPhoto + ')'}">
+      
+  </div>
+</div>

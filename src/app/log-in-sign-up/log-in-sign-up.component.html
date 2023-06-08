@@ -1,0 +1,11 @@
+<div class="logInSignUpWtapper" [style.display]="display">
+    <form>
+        <div class="mb-3">
+          <label for="keyInput" class="form-label">API Key</label>
+          <input type="text" class="form-control" id="keyInput" aria-describedby="emailHelp" [(ngModel)]="apiKey" name="apiKey">
+          <div id="emailHelp" class="form-text">We'll never share your API Key with anyone else </div>
+        </div>
+        <button type="submit" class="btn btn-primary log-in-button" (click)="logIn()">Log In</button>
+        <button class="btn btn-primary sign-up-button" (click)=" openLinkInNewWindow()">Sign Up</button>
+      </form>
+</div>

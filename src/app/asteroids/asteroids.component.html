@@ -1,0 +1,17 @@
+<div class="wrapper">
+  <div class="inputs_wrapper">
+    <input type="date" class="form-control" [(ngModel)]="firstDate" (ngModelChange)="fetchAsteroidInfo()">
+    <input type="date" class="form-control" [(ngModel)]="secondDate" (ngModelChange)="fetchAsteroidInfo()">
+  </div>  
+  <div class="cards_wrapper">
+    <div *ngFor="let date of dates" class="card">
+      <div class="card-body">
+        <h5 class="card-title">Date: {{ date }}</h5>
+        <p class="card-text">ID: {{ ids[dates.indexOf(date)] }}</p>
+        <p class="card-text">Estimated Diameter (Min): {{ estimated_diameters[dates.indexOf(date)].kilometers.estimated_diameter_min }}</p>
+        <p class="card-text">Estimated Diameter (Max): {{ estimated_diameters[dates.indexOf(date)].kilometers.estimated_diameter_max }}</p>
+        <p class="card-text">Close Approach Date: {{ close_approach_dates[dates.indexOf(date)][0].close_approach_date }}</p>
+      </div>
+    </div>
+  </div>
+</div>
